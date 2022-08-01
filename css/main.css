@@ -1,0 +1,216 @@
+body {
+  background: var(--w);
+  overflow-x: hidden;
+  width: 100%;
+}
+body main {
+  font-family: "Rubik", "Open Sans", sans-serif, Bahnschrift;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 10vh;
+  gap: 2em;
+}
+body main section {
+  width: 60%;
+}
+body main section.header-presentation {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5em;
+}
+body main section.conv-example .code-snippet {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-direction: row;
+  align-items: stretch;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--grey-border);
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1019607843);
+}
+body main section.conv-example .code-snippet .col {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding: 1em;
+  gap: 1em;
+}
+body main section.conv-example .code-snippet .col .row,
+body main section.conv-example .code-snippet .col .row-code {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 1em;
+}
+body main section.conv-example .code-snippet .col .row #title-code,
+body main section.conv-example .code-snippet .col .row-code #title-code {
+  color: #6f42c1;
+}
+body main section.conv-example .code-snippet .col .row .fa-chevron-left,
+body main section.conv-example .code-snippet .col .row-code .fa-chevron-left {
+  color: #aaaaaa;
+}
+body main section.conv-example .code-snippet .col .row .wrapper,
+body main section.conv-example .code-snippet .col .row-code .wrapper {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 0.2em;
+}
+body main section.conv-example .code-snippet .col .row .wrapper .excludedValue-label,
+body main section.conv-example .code-snippet .col .row .wrapper .text-label,
+body main section.conv-example .code-snippet .col .row-code .wrapper .excludedValue-label,
+body main section.conv-example .code-snippet .col .row-code .wrapper .text-label {
+  background: var(--grey-container);
+  padding: 0.2em;
+  border-radius: 5px;
+  color: var(--main-color);
+}
+body main section.conv-example .code-snippet .col .row-code {
+  gap: 0.2em;
+}
+body main section.conv-example .code-snippet .col:first-child {
+  background: var(--grey-container);
+  width: fit-content;
+}
+body main section.conv-wrapper {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5em;
+}
+body main section.conv-wrapper .row {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-direction: row;
+  align-items: stretch;
+  width: 100%;
+  gap: 1em;
+}
+body main section.conv-wrapper .row .conversion-from,
+body main section.conv-wrapper .row .conversion-to {
+  width: 100%;
+  border-radius: 5px;
+  padding: 1em;
+  border: 1px solid var(--grey-border);
+}
+body main section.conv-wrapper .row .conversion-from textarea,
+body main section.conv-wrapper .row .conversion-to textarea {
+  font-family: "Rubik", "Open Sans", sans-serif, Bahnschrift;
+  font-size: 1em;
+  border: 0;
+  resize: vertical;
+  width: 100%;
+  min-height: 20vh;
+  max-height: 60vh;
+  outline: none;
+}
+body main section.conv-wrapper .row .conversion-from .row,
+body main section.conv-wrapper .row .conversion-to .row {
+  justify-content: flex-end;
+}
+body main section.conv-wrapper .row .conversion-from .row label,
+body main section.conv-wrapper .row .conversion-from .row input,
+body main section.conv-wrapper .row .conversion-to .row label,
+body main section.conv-wrapper .row .conversion-to .row input {
+  width: 100%;
+}
+body main section.conv-wrapper .row .conversion-from {
+  gap: 1em;
+  display: flex;
+  flex-direction: column;
+}
+body main section.conv-wrapper .row .conversion-from button {
+  background: #4482FF;
+  color: var(--w);
+}
+body main section.conv-wrapper .row .conversion-to {
+  background: var(--grey-container);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body main section.code-github .header {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+body main section.code-github .code-example-github {
+  margin-top: 1em;
+}
+body main .color-subtitle {
+  color: var(--grey-font);
+}
+
+@media all and (max-width: 1200px) {
+  section.conv-example .code-snippet .col:first-child {
+    justify-content: space-between;
+  }
+  section.conv-example .code-snippet .row {
+    align-items: flex-start !important;
+  }
+  section.conv-example .code-snippet .row-code {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+  section.conv-example .code-snippet .row-code .wrapper {
+    margin-left: 2em;
+  }
+}
+@media all and (max-width: 800px) {
+  section {
+    width: 90% !important;
+  }
+}
+@media all and (max-width: 600px) {
+  section.conv-example p {
+    font-size: 0.8em;
+  }
+  section.conv-example .wrapper {
+    margin-left: 1em !important;
+  }
+  section.conv-wrapper .col.conversion-from .row {
+    flex-direction: row !important;
+  }
+  section.conv-wrapper .col.conversion-to {
+    gap: 1em;
+  }
+  section.conv-wrapper .row {
+    flex-direction: column !important;
+    align-items: flex-end !important;
+  }
+  section.conv-wrapper .row label {
+    width: fit-content;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

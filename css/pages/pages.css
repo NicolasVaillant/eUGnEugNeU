@@ -1,0 +1,167 @@
+body main .columns_content .content {
+  width: var(--width_header_summary);
+}
+body main .columns_content .content #info_pages {
+  margin-top: 1em;
+  text-align: justify;
+}
+body main .columns_content .content .wrapper_short_content {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+body main .columns_content .content .wrapper_short_content .short_infos_col {
+  width: 50%;
+  flex-basis: 100%;
+}
+body main .columns_content .content .wrapper_short_content .short_infos_col .short_infos {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: fit-content;
+  background: var(--bg);
+  border-radius: 10px;
+  padding: 1em;
+  gap: 1em;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+body main .columns_content .content .wrapper_short_content .short_infos_col .short_infos .info_short_content {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  white-space: nowrap;
+}
+body main .columns_content .content .wrapper_short_content .short_infos_col .short_infos .short_content p {
+  text-align: justify;
+}
+body main .columns_content .content .wrapper_short_content .short_infos_col .short_infos:last-child {
+  height: 100% !important;
+}
+body main .columns_content .content .info_improvements {
+  padding: 1em;
+  background: var(--grey-container);
+  border-radius: 15px;
+  margin-top: 1em;
+}
+body main .columns_content .content .info_improvements span.color {
+  font-weight: bold;
+  text-decoration: underline;
+}
+body main .columns_content .content .form {
+  width: 100%;
+  margin: 1em 0;
+}
+body main .columns_content .content .form .row {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 1em;
+  margin: 1em 0;
+}
+body main .columns_content .content .form .row.left {
+  justify-content: flex-start;
+}
+body main .columns_content .content .form .row.validation {
+  display: none;
+  padding: 1em;
+  border-radius: 5px;
+  justify-content: center;
+}
+body main .columns_content .content .form .row.validation.success_data {
+  display: flex;
+  background: #90f3b3;
+  padding: 1em;
+  border-radius: 10px;
+}
+body main .columns_content .content .form .row.validation.fail_data {
+  display: flex;
+  background: var(--disable);
+}
+body main .columns_content .content .form .row button {
+  background: var(--grey-container);
+  border: 2px solid var(--grey-border);
+  padding: 1em;
+  border-radius: 1000px;
+  aspect-ratio: 1;
+  width: 3.5em;
+  cursor: pointer;
+}
+body main .columns_content .content .form .checkbox_checked {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1em;
+  display: none;
+  background: var(--grey-container);
+  padding: 1em;
+  border-radius: 10px;
+}
+body main .columns_content .content .form .checkbox_checked.show_all_form {
+  display: flex !important;
+}
+body main .columns_content .content .form .checkbox_checked .row_ch {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+body main .columns_content .content .form .checkbox_checked .situation label {
+  flex-direction: row;
+  gap: 1em;
+  margin: 1em;
+}
+body main .columns_content .content .form .checkbox_checked label {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+body main .columns_content .content .form .checkbox_checked label input {
+  padding: 0.5em 1em;
+}
+body main .columns_content .content .form label {
+  cursor: pointer;
+}
+body main .columns_content .content .form label textarea {
+  width: 100%;
+  height: 40vh;
+  max-height: 50vh;
+  resize: vertical;
+}
+body main .columns_content .content .form .submit_button {
+  margin-top: 1em;
+  background: var(--grey-container);
+  border: 2px solid var(--grey-border);
+  padding: 1em;
+  border-radius: 5px;
+  width: fit-content;
+  cursor: pointer;
+}
+
+@media all and (max-width: 1300px) {
+  .wrapper_short_content {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+@media all and (max-width: 1000px) {
+  body main .columns_content .content .wrapper_short_content {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}
+@media all and (max-width: 600px) {
+  body main .columns_content .content .form .checkbox_checked .row_ch {
+    flex-direction: column !important;
+  }
+}
+
+/*# sourceMappingURL=pages.css.map */

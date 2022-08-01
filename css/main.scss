@@ -1,0 +1,206 @@
+@mixin centerFlex{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+body{
+    background: var(--w);
+    overflow-x: hidden;
+    width: 100%;
+
+    main{
+        font-family: "Rubik", "Open Sans", sans-serif, Bahnschrift;
+        @include centerFlex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10vh;
+        gap: 2em;
+
+        section{
+            width: 60%;
+
+            &.header-presentation{
+                @include centerFlex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: .5em;
+            }
+            &.conv-example{
+                .code-snippet{
+                    @include centerFlex;
+                    flex-direction: row;
+                    align-items: stretch;
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    border: 1px solid var(--grey-border);
+                    box-shadow: 0 5px 20px 0 #0000001a;
+
+                    .col{
+                        @include centerFlex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        width: 100%;
+                        padding: 1em;
+                        gap: 1em;
+
+                        .row,
+                        .row-code{
+                            @include centerFlex;
+                            flex-direction: row;
+                            gap: 1em;
+
+                            #title-code{color: #6f42c1}
+                            .fa-chevron-left{color:#aaaaaa}
+
+                            .wrapper{
+                                @include centerFlex;
+                                flex-direction: row;
+                                gap: .2em;
+                                .excludedValue-label,
+                                .text-label{
+                                    background: var(--grey-container);
+                                    padding: 0.2em;
+                                    border-radius: 5px;
+                                    color: var(--main-color);
+                                }
+                            }
+                        }
+                        .row-code{gap: 0.2em}
+
+                        &:first-child{
+                            background: var(--grey-container);
+                            width: fit-content;
+                        }
+                    }
+                }
+            }
+            &.conv-wrapper{
+                @include centerFlex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: .5em;
+                .row{
+                    @include centerFlex;
+                    flex-direction: row;
+                    align-items: stretch;
+                    width: 100%;
+                    gap: 1em;
+
+                    .conversion-from,
+                    .conversion-to{
+                        width: 100%;
+                        border-radius: 5px;
+                        padding: 1em;
+                        border: 1px solid var(--grey-border);
+
+                        textarea{
+                            font-family: "Rubik", "Open Sans", sans-serif, Bahnschrift;
+                            font-size: 1em;
+                            border: 0;
+                            resize: vertical;
+                            width: 100%;
+                            min-height: 20vh;
+                            max-height: 60vh;
+                            outline: none;
+                        }
+
+                        .row{
+                            justify-content: flex-end;
+
+                            label,
+                            input{
+                                width: 100%;
+                            }
+                        }
+                    }
+                    .conversion-from{
+                        gap: 1em;
+                        display: flex;
+                        flex-direction: column;
+                        button{
+                            background: #4482FF;
+                            color: var(--w);
+                        }
+                    }
+                    .conversion-to{
+                        background: var(--grey-container);
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                    }
+                }
+            }
+            &.code-github{
+                .header{
+                    @include centerFlex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    width: 100%;
+                }
+                .code-example-github{
+                    margin-top: 1em;
+                }
+            }
+        }
+        .color-subtitle{color: var(--grey-font)}
+    }
+}
+@media all and (max-width: 1200px){
+    section{
+        &.conv-example{
+            .code-snippet{
+                .col:first-child{
+                    justify-content: space-between
+                }
+                .row{
+                    align-items: flex-start!important;
+                }
+                .row-code{
+                    flex-direction: column!important;
+                    align-items: flex-start!important;
+                    .wrapper{
+                        margin-left: 2em;
+                    }
+                }
+            }
+        }
+    }
+}
+@media all and (max-width: 800px){
+    section{
+        width: 90% !important;
+    }
+}
+@media all and (max-width: 600px){
+    section{
+        &.conv-example{
+            p{
+                font-size: .8em;
+            }
+            .wrapper{
+                margin-left: 1em!important;
+            }
+        }
+        &.conv-wrapper{
+            .col{
+                &.conversion-from .row{
+                    flex-direction: row!important;
+                }
+                &.conversion-to{
+                    gap: 1em;
+                }
+            }
+            .row{
+                label{
+                    width: fit-content;
+                }
+                flex-direction: column!important;
+                align-items: flex-end!important;
+            }
+        }
+    }
+}

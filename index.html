@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    
+    <link rel="shortcut icon" type="image/png" href="resources/ico/icons8_3d_touch.ico"/>
+    <link rel="shortcut icon" type="image/png" href="resources/ico/icons8_3d_touch_16.png" sizes="16x16"/>
+    <link rel="shortcut icon" type="image/png" href="resources/ico/icons8_3d_touch_32.png" sizes="32x32"/>
+    
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <link rel="stylesheet" href="css/root.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/author.css">
+    
+    <script src="js/script.js" defer></script>
+    <title>eUGnEugNeu</title>
+</head>
+
+<body>
+    <main>
+        <section class="header-presentation">
+            <h1>Convertir vos “eugneugneu” en “EUGnEugneu.</h1>
+            <p class="color-subtitle">La conversion entrainera la modification de la casse de certaines lettres choisies aléatoirement, pour un effet géNiAL.</p>
+        </section>
+        <section class="conv-example">
+            <div class="code-snippet">
+                <div class="col">
+                    <p>1</p>
+                    <p>2</p>
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <i class="fas fa-chevron-right"></i>
+                        <div class="row-code">
+                            <p id="title-code">shuffle_js(</p>
+                            <div class="wrapper">
+                                <p class="text-label">text</p>
+                                <p class="text-js"></p>
+                            </div>
+                            <div class="wrapper">
+                                <p class="excludedValue-label">excludedValue</p>
+                                <p>"e"</p>
+                            </div>
+                            <p>)</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <i class="fas fa-chevron-left"></i>
+                        <p class="result-js"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="conv-wrapper">
+            <div class="row">
+                <div class="col conversion-from">
+                    <label for="conversion-from">
+                        <textarea name="conversion-from"
+                                  id="conversion-from"
+                                  cols="30" rows="10" placeholder="Convertir du texte"></textarea>
+                    </label>
+                    <div class="row">
+                        <label>
+                            <input class="button-to-author"
+                                   id="excludedValue"
+                                   type="text"
+                                   maxlength="1"
+                                   placeholder="Exclure une lettre">
+                        </label>
+                        <button class="button-to-author" onclick="convert()">Convertir</button>
+                    </div>
+                </div>
+                <div class="col conversion-to">
+                    <p class="conversion-result">Résultat</p>
+                    <div class="row">
+                        <button class="button-to-author" onclick="copyToClipboard()">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <p class="color-subtitle">*Par défaut, la casse de lettre “i” n’est pas modifiée.</p>
+        </section>
+        <section class="code-github">
+            <div class="header">
+                <h1>Code</h1>
+                <a href="" class="button-to-author">Voir le code sur Github</a>
+            </div>
+            <div class="code-example-github">
+                <script src="https://gist.github.com/NicolasVaillant/7b2b3fd7ac7fa8a582e92e20dd9f7787.js"></script>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

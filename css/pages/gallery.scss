@@ -1,0 +1,72 @@
+@mixin centerFlex{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+main{
+    header{
+        .element{}
+    }
+    .content{
+        overflow: visible!important;
+        .pictures_container_new_page{
+            margin: 1em 0;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1em;
+
+            .wrapper_picture_legend{
+                --border-radius: 15px;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                    box-shadow: rgb(50 50 93 / 25%) 0 50px 100px -20px, rgb(0 0 0 / 30%) 0px 30px 60px -30px;
+                border-radius: var(--border-radius);
+
+                img{
+                    width: 100%;
+                    min-height: 20vh;
+                    background: var(--grey-container);
+                    border-radius: var(--border-radius) var(--border-radius) 0 0;
+                }
+                .legend{
+                    @include centerFlex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    width: 100%;
+                    //background: var(--grey-container);
+                    padding: 1em;
+                    border-radius: 0 0 var(--border-radius) var(--border-radius);
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 1000px){
+    main{
+        .content{
+            .pictures_container_new_page{
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+        }
+    }
+}
+@media all and (max-width: 600px){
+    main{
+        .content{
+            .pictures_container_new_page{
+                grid-template-columns: repeat(1, 1fr) !important;
+                .wrapper_picture_legend{
+                    .legend{
+                        gap: 0.5em;
+                        flex-direction: column!important;
+                        align-items: flex-start!important;
+                    }
+                }
+            }
+        }
+    }
+}
