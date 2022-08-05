@@ -155,6 +155,9 @@ body main section.conv-wrapper .row .conversion-to {
   flex-direction: column;
   justify-content: space-between;
 }
+body main section.conv-wrapper .row .conversion-to .conversion-result {
+  user-select: text;
+}
 body main section.code-github .header {
   display: flex;
   justify-content: center;
